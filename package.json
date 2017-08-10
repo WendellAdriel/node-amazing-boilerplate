@@ -1,0 +1,48 @@
+{
+  "name": "node-amazing-boilerplate",
+  "version": "1.0.0",
+  "description": "An amazing, simple and powerful Node boilerplate",
+  "main": "./src/index.js",
+  "repository": "git@github.com:WendellAdriel/node-amazing-boilerplate.git",
+  "author": "Wendell Adriel <wendelladriel.ti@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "backpack build && node ./build/main.js",
+    "flow": "flow",
+    "test": "jest --forceExit",
+    "test:watch": "jest --watchAll",
+    "dev": "backpack",
+    "build": "backpack build",
+    "precommit": "yarn flow && yarn test",
+    "prepush": "yarn flow && yarn test"
+  },
+  "dependencies": {
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "backpack-core": "^0.4.2",
+    "express": "^4.15.4",
+    "flow-bin": "^0.52.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^20.0.3",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "eslint": "^4.4.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "jest-cli": "^20.0.4",
+    "supertest": "^3.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "globals": {
+      "__DEV__": true
+    }
+  }
+}

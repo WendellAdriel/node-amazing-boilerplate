@@ -5,6 +5,7 @@
 This project is built with **[Backpack](https://github.com/jaredpalmer/backpack)** and configured to use:
 
 - **[Express](https://expressjs.com/)**
+- **[ESLint](https://eslint.org)**
 - **[Jest](https://facebook.github.io/jest/)**
 - **[Flow](https://flow.org/)**
 - **[Husky](https://github.com/typicode/husky)**
@@ -39,6 +40,12 @@ yarn dev
 yarn flow
 ```
 
+- To run **ESLint** use
+
+```
+yarn lint
+```
+
 - To run the tests use
 
 ```
@@ -62,3 +69,11 @@ yarn build
 ```
 yarn start
 ```
+
+## Git Hooks
+
+This project uses **Husky** to create and manage Git hooks, it already comes with two hooks configured:
+
+- Before you commit and before you push your changes it will run: **ESLint**, **Flow** and **Jest** tests
+
+- If you want to, you can configure other hooks, edit or even delete the existing ones.

@@ -9,12 +9,13 @@
   "scripts": {
     "start": "backpack build && node ./build/main.js",
     "flow": "flow",
+    "lint": "eslint ./src/** --color",
     "test": "jest --forceExit",
     "test:watch": "jest --watchAll",
     "dev": "backpack",
     "build": "backpack build",
-    "precommit": "yarn flow && yarn test",
-    "prepush": "yarn flow && yarn test"
+    "precommit": "yarn lint && yarn flow && yarn test",
+    "prepush": "yarn lint && yarn flow && yarn test"
   },
   "dependencies": {
     "babel-plugin-transform-flow-strip-types": "^6.22.0",

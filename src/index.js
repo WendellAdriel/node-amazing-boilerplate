@@ -9,7 +9,7 @@ app.listen(port, (err) => {
     console.log(err)
   }
 
-  if (global.__DEV__) {
+  if (env.devMode) {
     console.log('> in development')
   }
 
